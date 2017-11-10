@@ -25,7 +25,5 @@ for filename in $(grep -rl foobar .); do
   docker run -it --rm -v $(pwd):/app -w /app fdm1/spark_scala sed -i "s/foobar/${PROJECT_NAME}/g" ${filename}
 done
 
-mv foobar ${PROJECT_NAME}
-
 docker run -it --rm -v $(pwd):/app -w /app fdm1/spark_scala sbt assembly
 
