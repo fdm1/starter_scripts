@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  spark:
+    image: fdm1/spark_scala:2.2.0-hadoop-2.7
+    volumes:
+      - .:/app
+            working_dir: /app
+    command: bash -c "while true; do sleep 100; done"
